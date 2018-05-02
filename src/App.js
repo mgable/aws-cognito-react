@@ -18,6 +18,7 @@ import { HashRouter as Router, Route, Switch, Redirect } from 'react-router-dom'
 import { state } from 'aws-cognito-redux-saga'
 
 class App extends React.Component {
+ 
   static propTypes = {
     auth: PropTypes.object
   }

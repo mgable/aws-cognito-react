@@ -2,6 +2,7 @@ import React from 'react'
 import { API } from '../API';
 
 export const LandingComponent = () => {
+  console.info("Hey");
   const style = {
     page: {},
     layout: {},

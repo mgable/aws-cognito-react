@@ -19,6 +19,7 @@
   "homepage": "http://cognito.dbroadhurst.net",
   "license": "MIT",
   "dependencies": {
+    "aws-cognito-promises": "^1.6.4",
     "aws-cognito-redux-saga": "^1.5.7",
     "material-ui": "^0.20.0",
     "react": "^16.2.0",

@@ -43,15 +43,18 @@ const store = createStore(
   composeEnhancers(applyMiddleware(sagaMiddleware))
 )
 
-sagaMiddleware.run(sagas)
+let task = sagaMiddleware.run(sagas).done.then(() => {console.info("I am done");}, (error) => {console.info("I errors");})
 
-injectTapEventPlugin()
+injectTapEventPlugin();
 
-ReactDOM.render(
+
+  ReactDOM.render(
   <MuiThemeProvider muiTheme={muiTheme}>
     <Provider store={store}>
       <App />
     </Provider>
   </MuiThemeProvider>,
   document.getElementById('root')
-)
+  )
+
+
