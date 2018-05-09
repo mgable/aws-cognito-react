@@ -1,9 +1,4 @@
-import React from 'react'
+import API from './APIContainer'
 
-export const API = () => {
-  console.info("hey!");
-  return (
-    <h1>this is the api</h1>
-  )
-}
+export default API
 

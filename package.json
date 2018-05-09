@@ -21,6 +21,7 @@
   "dependencies": {
     "aws-cognito-promises": "^1.6.4",
     "aws-cognito-redux-saga": "^1.5.7",
+    "cross-fetch": "^2.1.1",
     "material-ui": "^0.20.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
