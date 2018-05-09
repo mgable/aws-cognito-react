@@ -2,9 +2,7 @@ import { all, takeEvery } from 'redux-saga/effects'
 import { sagas } from 'aws-cognito-redux-saga'
 import fetchPost from '../actions/actions'
 
-
 function* watchIncrementAsync() {
-	console.info(" watchIncrementAsync was called");
 	try {
 		yield takeEvery('GET_API', fetchPost)
 	}catch(e){

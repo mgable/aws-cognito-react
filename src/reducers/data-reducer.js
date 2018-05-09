@@ -8,7 +8,6 @@ export const reducer = (state = initialState, action) => {
 }
 
 const dataReceived = (state, action) => {
-	console.info(state, action);
 	let label = action.label
 	return Object.assign({}, state, {[label]: action[label]})
 }

@@ -43,7 +43,7 @@ const store = createStore(
   composeEnhancers(applyMiddleware(sagaMiddleware))
 )
 
-sagaMiddleware.run(sagas).done.then(() => {console.info("I am done");}, (error) => {console.info("I errors");})
+sagaMiddleware.run(sagas); //.done.then(() => {console.info("I am done");}, (error) => {console.info("I errors");})
 
 injectTapEventPlugin();
 
