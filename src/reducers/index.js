@@ -7,7 +7,7 @@ import { reducer as dataReducer } from './data-reducer.js'
 const reducers = combineReducers({
   auth: authReducer.reducer,
   form: formReducer,
-  dataReducer
+  data: dataReducer
 })
 
 export default reducers
