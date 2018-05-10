@@ -4,8 +4,10 @@ import React from 'react'
 class APIComponent extends React.Component{
 
 	componentDidMount(){
+		console.info("API");
+		console.info(this.props);
 		this.props.getUnsecuredData()
-		this.props.getSecuredData()
+		this.props.getSecuredData(this.props.auth)
 	}
 	
 	render(){

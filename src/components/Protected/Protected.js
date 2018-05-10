@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import API  from '../API';
 
 import { state } from 'aws-cognito-redux-saga'
 
@@ -35,8 +36,11 @@ export class ProtectedComponent extends React.Component {
   }
 
   renderAuthInfo(auth) {
+    console.info("the auth");
+    console.info(auth);
     return (
       <div style={style.token}>
+        <div><API auth={auth}/> </div>
         <div style={style.label}>Access Token</div>
         <div>{auth.info.accessToken.jwtToken}</div>
         <div style={style.label}>ID Token</div>
@@ -54,7 +58,6 @@ export class ProtectedComponent extends React.Component {
       <div style={style.page}>
         <div style={style.layout}>
           <div style={style.heading}>Protected Page</div>
-
           {auth.isSignedIn === state.AUTH_SUCCESS
             ? this.renderAuthInfo(auth)
             : null}

@@ -11,8 +11,8 @@ const mapStatetoProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-  	getUnsecuredData: () => dispatch({type: 'GET_API', url: secure, label: 'secure'}),
-  	getSecuredData: () => dispatch({type: 'GET_API', url: unsecure, label: 'unsecure'})
+  	getUnsecuredData: () => dispatch({type: 'GET_API', url: unsecure, label: 'unsecure'}),
+  	getSecuredData: (auth) => dispatch({type: 'GET_API', url: secure, label: 'secure', auth})
   }
 }
 
