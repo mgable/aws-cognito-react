@@ -1,4 +1,4 @@
-import { all, takeEvery } from 'redux-saga/effects'
+import { all, fork, takeEvery } from 'redux-saga/effects'
 import { sagas } from 'aws-cognito-redux-saga'
 import fetchPost from '../actions/actions'
 
@@ -12,5 +12,5 @@ function* watchIncrementAsync() {
 
 
 export default function* root() {
-  yield all([sagas, /*helloSaga(),*/ watchIncrementAsync()])
+  yield all([fork(sagas), /*helloSaga(),*/ watchIncrementAsync()])
 }
