@@ -3,7 +3,7 @@ import { call, put } from 'redux-saga/effects'
 
 function* fetchPost(which){ 
 	var label = which.label,
-		auth = which.auth && which.auth.info && which.auth.info.idToken && which.auth.info.idToken.jwtToken || null,
+		auth = (which.auth && which.auth.info && which.auth.info.idToken && which.auth.info.idToken.jwtToken) || null,
 		headers = {},
 		data,
 		response;

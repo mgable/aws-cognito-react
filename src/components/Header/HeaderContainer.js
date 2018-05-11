@@ -19,6 +19,7 @@ const mapDispatchToProps = dispatch => {
       dispatch(reducer.signOut())
     },
     signIn: (username, password) => {
+      console.info("I am going to sign in");
       dispatch(reducer.signIn(username, password))
     }
   }
