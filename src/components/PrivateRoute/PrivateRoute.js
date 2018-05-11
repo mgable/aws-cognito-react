@@ -11,11 +11,12 @@ class PrivateRoute extends React.Component {
 
   render() {
     let { auth } = this.props
-
+    console.info(auth);
+    console.info(state);
     return (
       <Route
         render={() => {
-          return auth.isSignedIn !== state.AUTH_FAIL ? (
+          return auth.isSignedIn === state.AUTH_SUCCESS ? (
             <this.props.component />
           ) : (
             <Redirect to="/landing" />
